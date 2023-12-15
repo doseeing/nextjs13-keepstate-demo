@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { useSearchParams } from "next/navigation";
 
 const CounterPage: React.FC = () => {
@@ -13,10 +13,10 @@ const CounterPage: React.FC = () => {
       <h1>Counter Page</h1>
       <p>Count: {n}</p>
       <div>
-        <Link replace href={`/count?n=${n + 1}`}>
+        <Link replace href={`/count?n=${n + 1}`} scroll={false}>
           <button>Increment</button>
         </Link>
-        <Link replace href={`/count?n=${n - 1}`}>
+        <Link replace href={`/count?n=${n - 1}`} scroll={false}>
           <button>Decrement</button>
         </Link>
       </div>
